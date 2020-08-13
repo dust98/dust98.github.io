@@ -6,7 +6,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
     <meta charset="UTF-8">
-    <title>作业以及tomcat的搭建和hexo</title>
+    <title>8.11的作业</title>
 
     <meta name="author" content="John Doe">
 
@@ -16,7 +16,7 @@
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
 
-    <link rel="canonical" href="http://yoursite.com/2020/08/04/tomcat的搭建和hexo/">
+    <link rel="canonical" href="http://yoursite.com/2020/08/13/-11的作业/">
 
     
         <link rel="alternate" href="/atom.xml" type="application/atom+xml">
@@ -111,35 +111,45 @@
         <div>
     <article class="hentry" role="article">
         <header>
-            <h1 class="entry-title">作业以及tomcat的搭建和hexo</h1>
+            <h1 class="entry-title">8.11的作业</h1>
             <p class="meta">
-                <time datetime="2020-08-04T12:38:00.000Z" data-updated="true">Tue Aug 04 2020</time>
+                <time datetime="2020-08-13T05:41:21.000Z" data-updated="true">Thu Aug 13 2020</time>
             </p>
         </header>
         <div class="entry-content">
-            <p>1</p>
-<p>chown 用户名：用户组：文件/目次<br>若是整个目次下的都改，则加-R参数用于递归。</p>
-<p>chown(转变文件拥有者)change owner<br>格局： A：chown -R -h 用户名 文件/目次<br>-R选项意味着对所有子目录下的文件也都进行同样的操作，-h选项意味着在改变符号链接文件的属主时不影响该链接所指向的目标文件.<br>注意：一旦将文件的所有权交给了另一个用户，就无法再重新收回它的所有权，最终只能求助于系统管理员.</p>
-<p>chgrp(转变文件所属用户组)change group<br>chgrp 用户组 文件名 ###便是这个格了。若是整个目次下的都改，则加-R参数用于递归。<br>3<br>Touch 1<br>Chmod 610 1    数字<br>Chmod u+rw，g+x 1 </p>
-<p>2 tomcat<br><img src="/images/%E9%99%88%E6%BA%90%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%BD%9C%E4%B8%9A_20200804203942_0.jpg"><br>3 hexo</p>
-<p>git服务<br>命令<br>sudo apt-get install git </p>
-<p>创建仓库目录<br>sudo mkdir /home/repo</p>
-<p>创建一个空仓库<br>sudo git init –bare sample.git</p>
-<p>git clone 用户@ip:/目录</p>
-<p><img src="/images/%E5%9B%BE%E7%89%871.png"></p>
-<p><img src="/images/%E5%9B%BE%E7%89%872.png"></p>
+            <h1 id="1-使用yum方式安装mysql"><a href="#1-使用yum方式安装mysql" class="headerlink" title="1 使用yum方式安装mysql"></a>1 使用yum方式安装mysql</h1><hr>
+<p>安装mysql分支mariadb </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum -y install MariaDB-server MariaDB MariaDB-devel</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="2-查阅相关资料-对比yum和rmp，还有源码安装-有哪些不同"><a href="#2-查阅相关资料-对比yum和rmp，还有源码安装-有哪些不同" class="headerlink" title="2 查阅相关资料 对比yum和rmp，还有源码安装 有哪些不同"></a>2 查阅相关资料 对比yum和rmp，还有源码安装 有哪些不同</h1><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">rpm是由红帽公司开发的软件包管理方式，使用rpm我们可以方便的进行软件的安装、查询、卸载、升级等工作。但是rpm软件包之间的依赖性问题往往会很繁琐,尤其是软件由多个rpm包组成时。</span><br><span class="line">Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE中的Shell前端软件包管理器。基於RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软体包，无须繁琐地一次次下载、安装。</span><br><span class="line"></span><br><span class="line">1、yum安装可以看成是从网络在线安装的一种方式，只需要yum install 软件名，系统就自动根据yum源配置文件中的镜像位置去下载安装包了，并可以自动分析所需的软件依赖关系，自动安装所需的依赖软件包。此方式适合初学者，简单方便，不用考虑依赖关系。但有些软件并不能通过yum来安装。</span><br><span class="line">2、而源码安装方式是需要自己到网上下载源码包，然后解压安装。此方式可以指定配置参数，更加灵活方便，兼容性更强。比较适合对Linux系统有较多了解的进阶用户使用。</span><br><span class="line">3、rpm是安装本地存在的rpm包，如果存在依赖也需要安装上,如果某个rpm是自己修改编译的，那么只能用rpm安装了</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="3-yum安装jdk"><a href="#3-yum安装jdk" class="headerlink" title="3.yum安装jdk"></a>3.yum安装jdk</h1><hr>
+<p>先查看是否已安装jdk</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa |grep java</span><br><span class="line"></span><br><span class="line">rpm -qa |grep jdk</span><br><span class="line"></span><br><span class="line">rpm -qa |grep gcj</span><br></pre></td></tr></table></figure>
+<p>如果有就使用批量卸载命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep java | xargs rpm -e --nodeps </span><br></pre></td></tr></table></figure>
+<p>查找安装包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum search java </span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%AE%89%E8%A3%85%E5%8C%85.PNG"></p>
+<p>直接安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install java-1.8.0-openjdk* -y</span><br></pre></td></tr></table></figure>
+<p><img src="/images/jdk.PNG"></p>
+<p>检查是否安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
 
+<p><img src="/images/%E6%A3%80%E6%9F%A5.PNG"></p>
+<h1 id="使用源码安装mysql"><a href="#使用源码安装mysql" class="headerlink" title="使用源码安装mysql"></a>使用源码安装mysql</h1><p>找到mysql的安装包 解压后 在其目录中<br>编译并安装】</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
         </div>
         <footer>
             <p class="meta">
                 <span class="byline author vcard">Posted by <span class="fn">John Doe</span></span>
-                <time datetime="2020-08-04T12:38:00.000Z" data-updated="true">Tue Aug 04 2020</time>
+                <time datetime="2020-08-13T05:41:21.000Z" data-updated="true">Thu Aug 13 2020</time>
                 
             </p>
             <div class="sharing">
     
         <a class="twitter-share-button"
-           target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=%E4%BD%9C%E4%B8%9A%E4%BB%A5%E5%8F%8Atomcat%E7%9A%84%E6%90%AD%E5%BB%BA%E5%92%8Chexo">
+           target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=8.11%E7%9A%84%E4%BD%9C%E4%B8%9A">
             Tweet
         </a>
     
@@ -147,9 +157,9 @@
 
             <p class="meta">
                 
-                <a class="basic-alignment left" href="/" title="Previous Post: markdown学习">« markdown学习</a>
-                
 
+                
+                <a class="basic-alignment right" href="/" title="Previous Post: 8.13作业">8.13作业 »</a>
                 
             </p>
         </footer>
