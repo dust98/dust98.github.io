@@ -6,7 +6,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
     <meta charset="UTF-8">
-    <title>yum安装mysql+yum和各种安装方式的区别+jdk+源码安装</title>
+    <title>lnmp+nginx代理内网tomcat+iptables转发</title>
 
     <meta name="author" content="John Doe">
 
@@ -16,7 +16,7 @@
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
 
-    <link rel="canonical" href="http://yoursite.com/2020/08/13/-11的作业/">
+    <link rel="canonical" href="http://yoursite.com/2020/08/16/nmp-nginx代理内网tomcat-iptables转发/">
 
     
         <link rel="alternate" href="/atom.xml" type="application/atom+xml">
@@ -111,45 +111,45 @@
         <div>
     <article class="hentry" role="article">
         <header>
-            <h1 class="entry-title">yum安装mysql+yum和各种安装方式的区别+jdk+源码安装</h1>
+            <h1 class="entry-title">lnmp+nginx代理内网tomcat+iptables转发</h1>
             <p class="meta">
-                <time datetime="2020-08-13T05:41:21.000Z" data-updated="true">Thu Aug 13 2020</time>
+                <time datetime="2020-08-16T10:15:59.000Z" data-updated="true">Sun Aug 16 2020</time>
             </p>
         </header>
         <div class="entry-content">
-            <h1 id="1-使用yum方式安装mysql"><a href="#1-使用yum方式安装mysql" class="headerlink" title="1 使用yum方式安装mysql"></a>1 使用yum方式安装mysql</h1><hr>
-<p>安装mysql分支mariadb </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum -y install MariaDB-server MariaDB MariaDB-devel</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="2-查阅相关资料-对比yum和rmp，还有源码安装-有哪些不同"><a href="#2-查阅相关资料-对比yum和rmp，还有源码安装-有哪些不同" class="headerlink" title="2 查阅相关资料 对比yum和rmp，还有源码安装 有哪些不同"></a>2 查阅相关资料 对比yum和rmp，还有源码安装 有哪些不同</h1><hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">rpm是由红帽公司开发的软件包管理方式，使用rpm我们可以方便的进行软件的安装、查询、卸载、升级等工作。但是rpm软件包之间的依赖性问题往往会很繁琐,尤其是软件由多个rpm包组成时。</span><br><span class="line">Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE中的Shell前端软件包管理器。基於RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软体包，无须繁琐地一次次下载、安装。</span><br><span class="line"></span><br><span class="line">1、yum安装可以看成是从网络在线安装的一种方式，只需要yum install 软件名，系统就自动根据yum源配置文件中的镜像位置去下载安装包了，并可以自动分析所需的软件依赖关系，自动安装所需的依赖软件包。此方式适合初学者，简单方便，不用考虑依赖关系。但有些软件并不能通过yum来安装。</span><br><span class="line">2、而源码安装方式是需要自己到网上下载源码包，然后解压安装。此方式可以指定配置参数，更加灵活方便，兼容性更强。比较适合对Linux系统有较多了解的进阶用户使用。</span><br><span class="line">3、rpm是安装本地存在的rpm包，如果存在依赖也需要安装上,如果某个rpm是自己修改编译的，那么只能用rpm安装了</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="3-yum安装jdk"><a href="#3-yum安装jdk" class="headerlink" title="3.yum安装jdk"></a>3.yum安装jdk</h1><hr>
-<p>先查看是否已安装jdk</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa |grep java</span><br><span class="line"></span><br><span class="line">rpm -qa |grep jdk</span><br><span class="line"></span><br><span class="line">rpm -qa |grep gcj</span><br></pre></td></tr></table></figure>
-<p>如果有就使用批量卸载命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep java | xargs rpm -e --nodeps </span><br></pre></td></tr></table></figure>
-<p>查找安装包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum search java </span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><img src="/images/%E5%AE%89%E8%A3%85%E5%8C%85.PNG"></p>
-<p>直接安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install java-1.8.0-openjdk* -y</span><br></pre></td></tr></table></figure>
-<p><img src="/images/jdk.PNG"></p>
-<p>检查是否安装成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+            <h1 id="1-lnmp搭建做一个网站或网页"><a href="#1-lnmp搭建做一个网站或网页" class="headerlink" title="1.lnmp搭建做一个网站或网页"></a>1.lnmp搭建做一个网站或网页</h1><hr>
+<hr>
+<p>使用安装器 一键安装<br>如图</p>
+<p>将wordpress 解压到 /home/wwwroot/default 目录下<br>进入 IP/wordpress<br><img src="/images/789.PNG"><br><img src="/images/002.PNG"><br><img src="/images/.PNG"></p>
+<p>创建wordpress数据库<br><img src="/images/55555.PNG"><br>修改wordpress所有者和组 还有权限<br>后开始安装<br>填写信息后<br>开始书写文章<br><img src="/images/%E4%BD%A0%E5%A5%BD.PNG"></p>
+<h1 id="2-tomcat实验-设置内网不允许外部访问用nginx用代理的方式访问"><a href="#2-tomcat实验-设置内网不允许外部访问用nginx用代理的方式访问" class="headerlink" title="2.tomcat实验(设置内网不允许外部访问用nginx用代理的方式访问)"></a>2.tomcat实验(设置内网不允许外部访问用nginx用代理的方式访问)</h1><hr>
+<p>1限制tomcat外网访问 tomcat使用的8080端口 我们可以直接将防火墙打开限制访问8080端口<br>配置iptables服务对8080端口<br> #启动iptables服务  <br> service iptables start  <br> ＃设置iptables服务开机启动  <br> chkconfig iptables on   <br> ＃添加过滤规则  <br> iptables -t filter -A INPUT -p tcp -m tcp –dport 8080 -s localhost -j ACCEPT  <br> iptables -t filter -A INPUT -p tcp -m tcp –dport 8080 -j REJECT <br>如果iptables表没有初始化执行 iptables -F<br>serice iptables save – 配置文件保存<br>service iptables restart</p>
+<p>2安装tomcat 和nginx 同时开启服务 tomcat服务器此时在外网使用8080端口不能连接<br><img src="/images/8080%E5%85%B3%E9%97%AD.PNG"><br>3 打开nginx/conf/ 中的 nginx.conf 文件<br>在此文件中多加一个server<br><img src="/images/%E4%BB%A3%E7%A0%81.PNG"><br>重启重新在/nginx/sbin 目录下运行nginx -s reload加载配置文件</p>
+<p>外网进入此ip的8080端口无法进入说明外网不能直接访问tomcat<br><img src="/images/8080.PNG"></p>
+<p>此时我们查看服务器中的端口服务<br><img src="/images/nginx%E6%9C%8D%E5%8A%A1.PNG"><br>可以看到经过配置后 8888端口跑的nginx<br>我们用外网进入此ip的8888端口 就看到了tomcat的页面 此时我们是通过nginx代理的方式进入了tomcat<br><img src="/images/tomcat8888.PNG"><br>实验成功</p>
+<h1 id="3流量转发-用Iptables将lnmp网站或者网页-自定义端口-转发到kali的apache网站的80端口"><a href="#3流量转发-用Iptables将lnmp网站或者网页-自定义端口-转发到kali的apache网站的80端口" class="headerlink" title="3流量转发(用Iptables将lnmp网站或者网页(自定义端口)转发到kali的apache网站的80端口)"></a>3流量转发(用Iptables将lnmp网站或者网页(自定义端口)转发到kali的apache网站的80端口)</h1><hr>
+<p>给kali 安装apache2<br>apt-get install apache2<br>再启动apache<br>systemctl start  httpd</p>
+<p>192.168.8.198  lnmp服务器地址<br>192.168.8.224  kali apache 地址</p>
+<p><img src="/images/apache2.PNG"></p>
+<p>配置iptables</p>
+<p>iptables -t nat -A PREROUTING -d 192.168.8.224 -p tcp –dport 80 -j DNAT –to-destination 192.168.8.198:80</p>
+<p>iptables -t nat -A POSTROUTING -d 192.168.8.198 -p tcp –dport 80 -j SNAT –to 192.168.8.224<br>iptables -t nat –list</p>
+<p>sysctl -p </p>
+<p><img src="/images/kali.PNG"><br>这时候kali 的转发功能已经在运行了</p>
+<p>访问192.168.8.224和192.168.8.198 是同一个内容 转发成功<br><img src="/images/iptables.PNG"></p>
+<p>谢谢观看！</p>
 
-<p><img src="/images/%E6%A3%80%E6%9F%A5.PNG"></p>
-<h1 id="使用源码安装mysql"><a href="#使用源码安装mysql" class="headerlink" title="使用源码安装mysql"></a>使用源码安装mysql</h1><p>找到mysql的安装包 解压后 在其目录中<br>编译并安装】</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
         </div>
         <footer>
             <p class="meta">
                 <span class="byline author vcard">Posted by <span class="fn">John Doe</span></span>
-                <time datetime="2020-08-13T05:41:21.000Z" data-updated="true">Thu Aug 13 2020</time>
+                <time datetime="2020-08-16T10:15:59.000Z" data-updated="true">Sun Aug 16 2020</time>
                 
             </p>
             <div class="sharing">
     
         <a class="twitter-share-button"
-           target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=yum%E5%AE%89%E8%A3%85mysql%2Byum%E5%92%8C%E5%90%84%E7%A7%8D%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB%2Bjdk%2B%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85">
+           target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=lnmp%2Bnginx%E4%BB%A3%E7%90%86%E5%86%85%E7%BD%91tomcat%2Biptables%E8%BD%AC%E5%8F%91">
             Tweet
         </a>
     
@@ -157,11 +157,9 @@
 
             <p class="meta">
                 
-                <a class="basic-alignment left" href="/" title="Previous Post: lnmp+nginx代理内网tomcat+iptables转发">« lnmp+nginx代理内网tomcat+iptables转发</a>
-                
 
                 
-                <a class="basic-alignment right" href="/" title="Previous Post: lamp环境搭建 +禁止icmp+ssh配置限制登录+lnmp环境">lamp环境搭建 +禁止icmp+ssh配置限制登录+lnmp环境 »</a>
+                <a class="basic-alignment right" href="/" title="Previous Post: yum安装mysql+yum和各种安装方式的区别+jdk+源码安装">yum安装mysql+yum和各种安装方式的区别+jdk+源码安装 »</a>
                 
             </p>
         </footer>
