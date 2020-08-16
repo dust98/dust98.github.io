@@ -77,7 +77,7 @@
 
 <header role="banner">
     <hgroup>
-        <h1><a href="/">午夜动物</a></h1>
+        <h1><a href="/">ar-15</a></h1>
         
     </hgroup>
 </header>
@@ -123,18 +123,17 @@
 <p>将wordpress 解压到 /home/wwwroot/default 目录下<br>进入 IP/wordpress<br><img src="/images/789.PNG"><br><img src="/images/002.PNG"><br><img src="/images/.PNG"></p>
 <p>创建wordpress数据库<br><img src="/images/55555.PNG"><br>修改wordpress所有者和组 还有权限<br>后开始安装<br>填写信息后<br>开始书写文章<br><img src="/images/%E4%BD%A0%E5%A5%BD.PNG"></p>
 <h1 id="2-tomcat实验-设置内网不允许外部访问用nginx用代理的方式访问"><a href="#2-tomcat实验-设置内网不允许外部访问用nginx用代理的方式访问" class="headerlink" title="2.tomcat实验(设置内网不允许外部访问用nginx用代理的方式访问)"></a>2.tomcat实验(设置内网不允许外部访问用nginx用代理的方式访问)</h1><hr>
-<p>1限制tomcat外网访问 tomcat使用的8080端口 我们可以直接将防火墙打开限制访问8080端口<br>配置iptables服务对8080端口<br> #启动iptables服务  <br> service iptables start  <br> ＃设置iptables服务开机启动  <br> chkconfig iptables on   <br> ＃添加过滤规则  <br> iptables -t filter -A INPUT -p tcp -m tcp –dport 8080 -s localhost -j ACCEPT  <br> iptables -t filter -A INPUT -p tcp -m tcp –dport 8080 -j REJECT <br>如果iptables表没有初始化执行 iptables -F<br>serice iptables save – 配置文件保存<br>service iptables restart</p>
+<p>1限制tomcat外网访问 tomcat使用的8080端口 我们可以直接将防火墙打开限制访问8080端口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">配置iptables服务对8080端口</span><br><span class="line"> #启动iptables服务  </span><br><span class="line"> service iptables start  </span><br><span class="line"> ＃设置iptables服务开机启动  </span><br><span class="line"> chkconfig iptables on   </span><br><span class="line"> ＃添加过滤规则  </span><br><span class="line"> iptables -t filter -A INPUT -p tcp -m tcp --dport 8080 -s localhost -j ACCEPT  </span><br><span class="line"> iptables -t filter -A INPUT -p tcp -m tcp --dport 8080 -j REJECT </span><br><span class="line">如果iptables表没有初始化执行 iptables -F</span><br><span class="line">serice iptables save -- 配置文件保存</span><br><span class="line">service iptables restart</span><br></pre></td></tr></table></figure>
 <p>2安装tomcat 和nginx 同时开启服务 tomcat服务器此时在外网使用8080端口不能连接<br><img src="/images/8080%E5%85%B3%E9%97%AD.PNG"><br>3 打开nginx/conf/ 中的 nginx.conf 文件<br>在此文件中多加一个server<br><img src="/images/%E4%BB%A3%E7%A0%81.PNG"><br>重启重新在/nginx/sbin 目录下运行nginx -s reload加载配置文件</p>
 <p>外网进入此ip的8080端口无法进入说明外网不能直接访问tomcat<br><img src="/images/8080.PNG"></p>
 <p>此时我们查看服务器中的端口服务<br><img src="/images/nginx%E6%9C%8D%E5%8A%A1.PNG"><br>可以看到经过配置后 8888端口跑的nginx<br>我们用外网进入此ip的8888端口 就看到了tomcat的页面 此时我们是通过nginx代理的方式进入了tomcat<br><img src="/images/tomcat8888.PNG"><br>实验成功</p>
 <h1 id="3流量转发-用Iptables将lnmp网站或者网页-自定义端口-转发到kali的apache网站的80端口"><a href="#3流量转发-用Iptables将lnmp网站或者网页-自定义端口-转发到kali的apache网站的80端口" class="headerlink" title="3流量转发(用Iptables将lnmp网站或者网页(自定义端口)转发到kali的apache网站的80端口)"></a>3流量转发(用Iptables将lnmp网站或者网页(自定义端口)转发到kali的apache网站的80端口)</h1><hr>
-<p>给kali 安装apache2<br>apt-get install apache2<br>再启动apache<br>systemctl start  httpd</p>
-<p>192.168.8.198  lnmp服务器地址<br>192.168.8.224  kali apache 地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">给kali 安装apache2</span><br><span class="line">apt-get install apache2</span><br><span class="line">再启动apache</span><br><span class="line">systemctl start  httpd</span><br><span class="line"></span><br><span class="line">192.168.8.198  lnmp服务器地址</span><br><span class="line">192.168.8.224  kali apache 地址</span><br></pre></td></tr></table></figure>
 <p><img src="/images/apache2.PNG"></p>
 <p>配置iptables</p>
-<p>iptables -t nat -A PREROUTING -d 192.168.8.224 -p tcp –dport 80 -j DNAT –to-destination 192.168.8.198:80</p>
-<p>iptables -t nat -A POSTROUTING -d 192.168.8.198 -p tcp –dport 80 -j SNAT –to 192.168.8.224<br>iptables -t nat –list</p>
-<p>sysctl -p </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">iptables -t nat -A PREROUTING -d 192.168.8.224 -p tcp --dport 80 -j DNAT --to-destination 192.168.8.198:80</span><br><span class="line"></span><br><span class="line">iptables -t nat -A POSTROUTING -d 192.168.8.198 -p tcp --dport 80 -j SNAT --to 192.168.8.224</span><br><span class="line">iptables -t nat –list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sysctl -p </span><br></pre></td></tr></table></figure>
+
 <p><img src="/images/kali.PNG"><br>这时候kali 的转发功能已经在运行了</p>
 <p>访问192.168.8.224和192.168.8.198 是同一个内容 转发成功<br><img src="/images/iptables.PNG"></p>
 <p>谢谢观看！</p>
