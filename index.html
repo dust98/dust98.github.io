@@ -1,266 +1,568 @@
-
-
 <!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7" lang="en"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8" lang="en"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<html lang="en">
+
+<!-- Head tag -->
 <head>
-    <meta charset="UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="John Doe">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="ar-15"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="ar-15"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+    
+        <meta name="twitter:card" content="summary" />
+    
+    
+    
+
+    <!-- Title -->
+    
     <title>ar-15</title>
 
-    <meta name="author" content="John Doe">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 
-    <link rel="shortcut icon" href="/images/favicon.png">
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-    <link rel="canonical" href="http://yoursite.com/">
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
 
+    <!-- Custom CSS -->
     
-        <link rel="alternate" href="/atom.xml" type="application/atom+xml">
-    
-
-    
-
-    
-<script src="/js/modernizr-2.0.js"></script>
+<link rel="stylesheet" href="/css/style.css">
 
 
-    
-<script src="/js/jquery-1.9.1.js"></script>
-
-
-    
-    <script>window.twttr = (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0],
-                t = window.twttr || {};
-            if (d.getElementById(id)) return t;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://platform.twitter.com/widgets.js";
-            fjs.parentNode.insertBefore(js, fjs);
-
-            t._e = [];
-            t.ready = function(f) {
-                t._e.push(f);
-            };
-
-            return t;
-        }(document, "script", "twitter-wjs"));</script>
-
-    
-    <link rel="me" href="https://twitter.com/your_twitter">
+    <!-- Google Analytics -->
     
 
-
-
-    
-<script src="/js/octo.js"></script>
-
-
-    
-<link rel="stylesheet" href="/css/octo.css">
-
-
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet"
-          type="text/css">
-
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet"
-          type="text/css">
-
-    
 
 <meta name="generator" content="Hexo 5.0.0"></head>
+
+
 <body>
 
-<header role="banner">
-    <hgroup>
-        <h1><a href="/">ar-15</a></h1>
-        
-    </hgroup>
-</header>
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
 
-<nav role="navigation">
-    
-        <ul class="subscription" data-subscription="rss">
-            <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
         </ul>
-    
-
-    <form action="https://google.com/search" method="get">
-        <fieldset role="search">
-            <input type="hidden" name="q" value="site:http://yoursite.com/">
-            <input class="search" type="text" name="q" results="0" placeholder="Search">
-        </fieldset>
-    </form>
-
-    <ul class="main-navigation">
-        
-            <li><a href="/">Blog</a></li>
-        
-            <li><a href="/archives">Archives</a></li>
-        
-    </ul>
-</nav>
-
-
-<div id="main">
-    <div id="content">
-        <div class="blog-index">
-    
-        
-        <article>
-            <header>
-                <h1 class="entry-title">
-                    <a href="/2020/08/16/nmp-nginx代理内网tomcat-iptables转发/">lnmp+nginx代理内网tomcat+iptables转发</a>
-                </h1>
-                <p class="meta">
-                    <time datetime="2020-08-16T10:15:59.000Z" data-updated="true">Sun Aug 16 2020</time>
-                </p>
-            </header>
-            <div class="entry-content"></div>
-            <footer>
-                <a rel="full-article" href="/2020/08/16/nmp-nginx代理内网tomcat-iptables转发/">Read on →</a>
-            </footer>
-        </article>
-        
-        <article>
-            <header>
-                <h1 class="entry-title">
-                    <a href="/2020/08/13/-11的作业/">yum安装mysql+yum和各种安装方式的区别+jdk+源码安装</a>
-                </h1>
-                <p class="meta">
-                    <time datetime="2020-08-13T05:41:21.000Z" data-updated="true">Thu Aug 13 2020</time>
-                </p>
-            </header>
-            <div class="entry-content"></div>
-            <footer>
-                <a rel="full-article" href="/2020/08/13/-11的作业/">Read on →</a>
-            </footer>
-        </article>
-        
-        <article>
-            <header>
-                <h1 class="entry-title">
-                    <a href="/2020/08/10/络/">lamp环境搭建 +禁止icmp+ssh配置限制登录+lnmp环境</a>
-                </h1>
-                <p class="meta">
-                    <time datetime="2020-08-10T09:28:59.000Z" data-updated="true">Mon Aug 10 2020</time>
-                </p>
-            </header>
-            <div class="entry-content"></div>
-            <footer>
-                <a rel="full-article" href="/2020/08/10/络/">Read on →</a>
-            </footer>
-        </article>
-        
-        <article>
-            <header>
-                <h1 class="entry-title">
-                    <a href="/2020/08/08/习/">markdown学习</a>
-                </h1>
-                <p class="meta">
-                    <time datetime="2020-08-08T10:48:00.000Z" data-updated="true">Sat Aug 08 2020</time>
-                </p>
-            </header>
-            <div class="entry-content"></div>
-            <footer>
-                <a rel="full-article" href="/2020/08/08/习/">Read on →</a>
-            </footer>
-        </article>
-        
-        <article>
-            <header>
-                <h1 class="entry-title">
-                    <a href="/2020/08/04/tomcat的搭建和hexo/">作业以及tomcat的搭建和hexo</a>
-                </h1>
-                <p class="meta">
-                    <time datetime="2020-08-04T12:38:00.000Z" data-updated="true">Tue Aug 04 2020</time>
-                </p>
-            </header>
-            <div class="entry-content"></div>
-            <footer>
-                <a rel="full-article" href="/2020/08/04/tomcat的搭建和hexo/">Read on →</a>
-            </footer>
-        </article>
-        
-        <div class="pagination">
-    <a href="/archives">Blog Archives</a>
-    <span class="page-number current">1</span>
-</div>
-
-    
-</div>
-
-<aside class="sidebar">
-    <section class="odd">
-    <h1>Recent Posts</h1>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/08/16/nmp-nginx%E4%BB%A3%E7%90%86%E5%86%85%E7%BD%91tomcat-iptables%E8%BD%AC%E5%8F%91/">lnmp+nginx代理内网tomcat+iptables转发</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/13/-11%E7%9A%84%E4%BD%9C%E4%B8%9A/">yum安装mysql+yum和各种安装方式的区别+jdk+源码安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/10/%E7%BB%9C/">lamp环境搭建 +禁止icmp+ssh配置限制登录+lnmp环境</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/08/%E4%B9%A0/">markdown学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/04/tomcat%E7%9A%84%E6%90%AD%E5%BB%BA%E5%92%8Chexo/">作业以及tomcat的搭建和hexo</a></li></ul>
-</section><section class="even">
-    <h1>GitHub Repos</h1>
-    <ul id="gh_repos">
-        <li class="loading">Status updating&#8230;</li>
-    </ul>
-
-    <a target="_blank" rel="noopener" href="https://github.com/your_github">@your_github</a> on GitHub
-
-    <script>
-        $(document).ready(function(){
-            const options = {
-                user: 'your_github',
-                count: 0,
-                skip_forks: true,
-                target: '#gh_repos'
-            }
-
-            function escapeHtml(str) {
-                return $('<div/>').text(str).html();
-            }
-
-            function render(target, repos){
-                let i, fragment = '', t = $(target)[0];
-
-                for(i = 0; i < repos.length; i++) {
-                    fragment += '<li><a href="'+repos[i].html_url+'">'+repos[i].name+'</a><p>'+escapeHtml(repos[i].description||'')+'</p></li>';
-                }
-                t.innerHTML = fragment;
-            }
-
-            $.ajax({
-                url: "https://api.github.com/users/"+options.user+"/repos?sort=pushed&callback=?",
-                dataType: 'jsonp',
-                error: function (err) {
-                    $(options.target + ' li.loading').addClass('error').text("Error loading feed");
-                },
-                success: function(data) {
-                    var repos = [];
-                    if (!data || !data.data) { return; }
-                    for (var i = 0; i < data.data.length; i++) {
-                        if (options.skip_forks && data.data[i].fork) { continue; }
-                        repos.push(data.data[i]);
-                    }
-                    if (options.count) { repos.splice(options.count); }
-                    render(options.target, repos);
-                }
-            });
-        });
-    </script>
-</section>
-</aside>
-
     </div>
 </div>
 
-<footer role="contentinfo">
-    <p>
-        Copyright © 2020 - John Doe -
-        <span class="credit">Generated using <a target="_blank" rel="noopener" href="https://github.com/jbreckmckye/hexo-theme-octo">Octo theme</a> for <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></span>
-    </p>
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">ar-15</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2020/08/16/nmp-nginx%E4%BB%A3%E7%90%86%E5%86%85%E7%BD%91tomcat-iptables%E8%BD%AC%E5%8F%91/">
+                lnmp+nginx代理内网tomcat+iptables转发
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2020-08-16</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <h1 id="1-lnmp搭建做一个网站或网页"><a href="#1-lnmp搭建做一个网站或网页" class="headerlink" title="1.lnmp搭建做一个网站或网页"></a>1.lnmp搭建做一个网站或网页</h1><hr>
+<hr>
+<p>使用安装器 一键安装<br>如图</p>
+<p>将wordpress 解压到 /home/wwwroot/default 目录下<br>进入 IP/wordpress<br><img src="/images/789.PNG"><br><img src="/images/002.PNG"><br><img src="/images/.PNG"></p>
+<p>创建wordpress数据库<br><img src="/images/55555.PNG"><br>修改wordpress所有者和组 还有权限<br>后开始安装<br>填写信息后<br>开始书写文章<br><img src="/images/%E4%BD%A0%E5%A5%BD.PNG"></p>
+<h1 id="2-tomcat实验-设置内网不允许外部访问用nginx用代理的方式访问"><a href="#2-tomcat实验-设置内网不允许外部访问用nginx用代理的方式访问" class="headerlink" title="2.tomcat实验(设置内网不允许外部访问用nginx用代理的方式访问)"></a>2.tomcat实验(设置内网不允许外部访问用nginx用代理的方式访问)</h1><hr>
+<p>1限制tomcat外网访问 tomcat使用的8080端口 我们可以直接将防火墙打开限制访问8080端口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">配置iptables服务对8080端口</span><br><span class="line"> #启动iptables服务  </span><br><span class="line"> service iptables start  </span><br><span class="line"> ＃设置iptables服务开机启动  </span><br><span class="line"> chkconfig iptables on   </span><br><span class="line"> ＃添加过滤规则  </span><br><span class="line"> iptables -t filter -A INPUT -p tcp -m tcp --dport 8080 -s localhost -j ACCEPT  </span><br><span class="line"> iptables -t filter -A INPUT -p tcp -m tcp --dport 8080 -j REJECT </span><br><span class="line">如果iptables表没有初始化执行 iptables -F</span><br><span class="line">serice iptables save -- 配置文件保存</span><br><span class="line">service iptables restart</span><br></pre></td></tr></table></figure>
+<p>2安装tomcat 和nginx 同时开启服务 tomcat服务器此时在外网使用8080端口不能连接<br><img src="/images/8080%E5%85%B3%E9%97%AD.PNG"><br>3 打开nginx/conf/ 中的 nginx.conf 文件<br>在此文件中多加一个server<br><img src="/images/%E4%BB%A3%E7%A0%81.PNG"><br>重启重新在/nginx/sbin 目录下运行nginx -s reload加载配置文件</p>
+<p>外网进入此ip的8080端口无法进入说明外网不能直接访问tomcat<br><img src="/images/8080.PNG"></p>
+<p>此时我们查看服务器中的端口服务<br><img src="/images/nginx%E6%9C%8D%E5%8A%A1.PNG"><br>可以看到经过配置后 8888端口跑的nginx<br>我们用外网进入此ip的8888端口 就看到了tomcat的页面 此时我们是通过nginx代理的方式进入了tomcat<br><img src="/images/tomcat8888.PNG"><br>实验成功</p>
+<h1 id="3流量转发-用Iptables将lnmp网站或者网页-自定义端口-转发到kali的apache网站的80端口"><a href="#3流量转发-用Iptables将lnmp网站或者网页-自定义端口-转发到kali的apache网站的80端口" class="headerlink" title="3流量转发(用Iptables将lnmp网站或者网页(自定义端口)转发到kali的apache网站的80端口)"></a>3流量转发(用Iptables将lnmp网站或者网页(自定义端口)转发到kali的apache网站的80端口)</h1><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">给kali 安装apache2</span><br><span class="line">apt-get install apache2</span><br><span class="line">再启动apache</span><br><span class="line">systemctl start  httpd</span><br><span class="line"></span><br><span class="line">192.168.8.198  lnmp服务器地址</span><br><span class="line">192.168.8.224  kali apache 地址</span><br></pre></td></tr></table></figure>
+<p><img src="/images/apache2.PNG"></p>
+<p>配置iptables</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">iptables -t nat -A PREROUTING -d 192.168.8.224 -p tcp --dport 80 -j DNAT --to-destination 192.168.8.198:80</span><br><span class="line"></span><br><span class="line">iptables -t nat -A POSTROUTING -d 192.168.8.198 -p tcp --dport 80 -j SNAT --to 192.168.8.224</span><br><span class="line">iptables -t nat –list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sysctl -p </span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/kali.PNG"><br>这时候kali 的转发功能已经在运行了</p>
+<p>访问192.168.8.224和192.168.8.198 是同一个内容 转发成功<br><img src="/images/iptables.PNG"></p>
+<p>谢谢观看！</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2020/08/13/-11%E7%9A%84%E4%BD%9C%E4%B8%9A/">
+                yum安装mysql+yum和各种安装方式的区别+jdk+源码安装
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2020-08-13</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <h1 id="1-使用yum方式安装mysql"><a href="#1-使用yum方式安装mysql" class="headerlink" title="1 使用yum方式安装mysql"></a>1 使用yum方式安装mysql</h1><hr>
+<p>安装mysql分支mariadb </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum -y install MariaDB-server MariaDB MariaDB-devel</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="2-查阅相关资料-对比yum和rmp，还有源码安装-有哪些不同"><a href="#2-查阅相关资料-对比yum和rmp，还有源码安装-有哪些不同" class="headerlink" title="2 查阅相关资料 对比yum和rmp，还有源码安装 有哪些不同"></a>2 查阅相关资料 对比yum和rmp，还有源码安装 有哪些不同</h1><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">rpm是由红帽公司开发的软件包管理方式，使用rpm我们可以方便的进行软件的安装、查询、卸载、升级等工作。但是rpm软件包之间的依赖性问题往往会很繁琐,尤其是软件由多个rpm包组成时。</span><br><span class="line">Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE中的Shell前端软件包管理器。基於RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软体包，无须繁琐地一次次下载、安装。</span><br><span class="line"></span><br><span class="line">1、yum安装可以看成是从网络在线安装的一种方式，只需要yum install 软件名，系统就自动根据yum源配置文件中的镜像位置去下载安装包了，并可以自动分析所需的软件依赖关系，自动安装所需的依赖软件包。此方式适合初学者，简单方便，不用考虑依赖关系。但有些软件并不能通过yum来安装。</span><br><span class="line">2、而源码安装方式是需要自己到网上下载源码包，然后解压安装。此方式可以指定配置参数，更加灵活方便，兼容性更强。比较适合对Linux系统有较多了解的进阶用户使用。</span><br><span class="line">3、rpm是安装本地存在的rpm包，如果存在依赖也需要安装上,如果某个rpm是自己修改编译的，那么只能用rpm安装了</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="3-yum安装jdk"><a href="#3-yum安装jdk" class="headerlink" title="3.yum安装jdk"></a>3.yum安装jdk</h1><hr>
+<p>先查看是否已安装jdk</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa |grep java</span><br><span class="line"></span><br><span class="line">rpm -qa |grep jdk</span><br><span class="line"></span><br><span class="line">rpm -qa |grep gcj</span><br></pre></td></tr></table></figure>
+<p>如果有就使用批量卸载命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep java | xargs rpm -e --nodeps </span><br></pre></td></tr></table></figure>
+<p>查找安装包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum search java </span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%AE%89%E8%A3%85%E5%8C%85.PNG"></p>
+<p>直接安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install java-1.8.0-openjdk* -y</span><br></pre></td></tr></table></figure>
+<p><img src="/images/jdk.PNG"></p>
+<p>检查是否安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%A3%80%E6%9F%A5.PNG"></p>
+<h1 id="使用源码安装mysql"><a href="#使用源码安装mysql" class="headerlink" title="使用源码安装mysql"></a>使用源码安装mysql</h1><p>找到mysql的安装包 解压后 在其目录中<br>编译并安装】</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2020/08/10/%E7%BB%9C/">
+                lamp环境搭建 +禁止icmp+ssh配置限制登录+lnmp环境
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2020-08-10</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <h1 id="1-搭建lamp服务器-添加phpinfo访问-随便加俩html网站在上面"><a href="#1-搭建lamp服务器-添加phpinfo访问-随便加俩html网站在上面" class="headerlink" title="1 搭建lamp服务器  添加phpinfo访问  随便加俩html网站在上面"></a>1 搭建lamp服务器  添加phpinfo访问  随便加俩html网站在上面</h1><hr>
+<p>安装 apache 服务器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install httpd</span><br></pre></td></tr></table></figure>
+<p>安装mysql分支mariadb </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install MariaDB-server MariaDB MariaDB-devel</span><br></pre></td></tr></table></figure>
+
+<p>Php安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yum install php</span><br></pre></td></tr></table></figure>
+<p>启动apache</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Systemctl start httpd</span><br></pre></td></tr></table></figure>
+<p>访问apache 的web页面<br><img src="/images/%E4%BB%8E.PNG"><br>phpinfo<br><img src="/images/phpinfo.PNG"></p>
+<p>自己编写html 如图<br><img src="/images/%E8%87%AA%E5%B7%B1%E5%86%99%E7%9A%84%E7%BD%91%E7%AB%99.PNG"></p>
+<h1 id="2-配置防火墙允许web端口访问和禁止web端口访问，禁用icmp然后尝试ping其他服务器-用firewall和iptables"><a href="#2-配置防火墙允许web端口访问和禁止web端口访问，禁用icmp然后尝试ping其他服务器-用firewall和iptables" class="headerlink" title="2.配置防火墙允许web端口访问和禁止web端口访问，禁用icmp然后尝试ping其他服务器 (用firewall和iptables)"></a>2.配置防火墙允许web端口访问和禁止web端口访问，禁用icmp然后尝试ping其他服务器 (用firewall和iptables)</h1><hr>
+<p>Web使用的80 端口<br>Firewall的80端口开放与关闭</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone&#x3D;public --add-port&#x3D;80&#x2F;tcp --permanen</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D; public --remove-port&#x3D;80&#x2F;tcp --permanent</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>iptables</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.iptables -A INPUT -p tcp --dport 80 -j ACCEPT</span><br><span class="line">2.iptables -A OUTPUT -p tcp --sport 80 -j ACCEPT</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="禁用icmp"><a href="#禁用icmp" class="headerlink" title="(禁用icmp)"></a>(禁用icmp)</h2><p>Firewall</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --permanent --add-rich-rule&#x3D;&#39;rule protocol value&#x3D;icmp</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>iptables</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iptables -A INPUT -p icmp --icmp-type 8 -s 0&#x2F;0 -j DROP</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+<h1 id="3配置ssh-禁用root-登录-使用普通账户登录，修改端口号到高位端口，尝试连接-连接成功截图"><a href="#3配置ssh-禁用root-登录-使用普通账户登录，修改端口号到高位端口，尝试连接-连接成功截图" class="headerlink" title="3配置ssh 禁用root 登录  使用普通账户登录，修改端口号到高位端口，尝试连接  连接成功截图"></a>3配置ssh 禁用root 登录  使用普通账户登录，修改端口号到高位端口，尝试连接  连接成功截图</h1><hr>
+<p>安装openssh-server<br>开启ssh服务systemctl start ssh<br>配置sshd文件 vi /etc/ssh/sshd_config<br>设置为允许账号密码登录 许可root登录填no</p>
+<p><img src="/images/sshd.PNG"></p>
+<p>新建用户可登录无管理员权限</p>
+<p><img src="/images/%E6%96%B0%E5%BB%BA%E7%94%A8%E6%88%B7%E5%8F%AF%E4%BB%A5%E7%99%BB%E5%BD%95.PNG"><br>root无法登录</p>
+<p><img src="/images/root%E6%97%A0%E6%B3%95%E7%99%BB%E5%BD%95.PNG"></p>
+<h1 id="4-搭建lnmp服务器，在lnmp环境下搭建wordpress并发布一篇文章"><a href="#4-搭建lnmp服务器，在lnmp环境下搭建wordpress并发布一篇文章" class="headerlink" title="4.搭建lnmp服务器，在lnmp环境下搭建wordpress并发布一篇文章"></a>4.搭建lnmp服务器，在lnmp环境下搭建wordpress并发布一篇文章</h1><hr>
+<p>使用安装器 一键安装<br>如图</p>
+<p>将wordpress 解压到 /home/wwwroot/default 目录下<br>进入 IP/wordpress<br><img src="/images/789.PNG"><br><img src="/images/002.PNG"><br><img src="/images/.PNG"></p>
+<p>创建wordpress数据库<br><img src="/images/55555.PNG"><br>修改wordpress所有者和组 还有权限<br>后开始安装<br>填写信息后<br>开始书写文章<br><img src="/images/%E4%BD%A0%E5%A5%BD.PNG"></p>
+<h1 id="谢谢观看。"><a href="#谢谢观看。" class="headerlink" title="谢谢观看。"></a>谢谢观看。</h1>
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2020/08/08/%E4%B9%A0/">
+                markdown学习
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2020-08-08</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <h1 id="markdown标题"><a href="#markdown标题" class="headerlink" title="markdown标题"></a>markdown标题</h1><hr>
+<p><code>我展示的是一级标题 =================</code><br><code> 我展示的是二级标题 -----------------</code><br><code># 一级标题</code><br><code>## 二级标题</code><br><code>### 三级标题</code></p>
+<p>最多六个标题</p>
+<h1 id="markdown-段落"><a href="#markdown-段落" class="headerlink" title="markdown 段落"></a>markdown 段落</h1><hr>
+<p> 两个空格＋回车<br>或者 直接空行</p>
+<h1 id="markdown-字体"><a href="#markdown-字体" class="headerlink" title="markdown 字体"></a>markdown 字体</h1><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*斜体文本*</span><br><span class="line">_斜体文本_</span><br><span class="line">**粗体文本**</span><br><span class="line">__粗体文本__</span><br><span class="line">***粗斜体文本***</span><br><span class="line">___粗斜体文本___</span><br></pre></td></tr></table></figure>
+<h1 id="markdown-分割线"><a href="#markdown-分割线" class="headerlink" title="markdown 分割线"></a>markdown 分割线</h1><hr>
+<p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line"></span><br><span class="line">* * *</span><br><span class="line"></span><br><span class="line">*****</span><br><span class="line"></span><br><span class="line">- - -</span><br><span class="line"></span><br><span class="line">----------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h1><p><code> ~~BAIDU.COM~~</code></p>
+<h1 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h1><p><code>&lt;u&gt;带下划线文本&lt;/u&gt;</code></p>
+<h1 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h1><hr>
+<h1 id="Markdown-列表"><a href="#Markdown-列表" class="headerlink" title="Markdown 列表"></a>Markdown 列表</h1><hr>
+<p>Markdown 支持有序列表和无序列表。</p>
+<p>1.无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记，这些标记后面要添加一个空格，然后再填写内容</p>
+<p>2.有序列表使用数字并加上 . 号来表示</p>
+<h2 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 第一项：</span><br><span class="line">    - 第一项嵌套的第一个元素</span><br><span class="line">    - 第一项嵌套的第二个元素</span><br><span class="line">2. 第二项：</span><br><span class="line">    - 第二项嵌套的第一个元素</span><br><span class="line">    - 第二项嵌套的第二个元素</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="markdown-区块"><a href="#markdown-区块" class="headerlink" title="markdown 区块"></a>markdown 区块</h1><blockquote>
+<p>nihao<br>woshinikeaidebaba</p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2020/08/04/tomcat%E7%9A%84%E6%90%AD%E5%BB%BA%E5%92%8Chexo/">
+                作业以及tomcat的搭建和hexo
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2020-08-04</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>1</p>
+<p>chown 用户名：用户组：文件/目次<br>若是整个目次下的都改，则加-R参数用于递归。</p>
+<p>chown(转变文件拥有者)change owner<br>格局： A：chown -R -h 用户名 文件/目次<br>-R选项意味着对所有子目录下的文件也都进行同样的操作，-h选项意味着在改变符号链接文件的属主时不影响该链接所指向的目标文件.<br>注意：一旦将文件的所有权交给了另一个用户，就无法再重新收回它的所有权，最终只能求助于系统管理员.</p>
+<p>chgrp(转变文件所属用户组)change group<br>chgrp 用户组 文件名 ###便是这个格了。若是整个目次下的都改，则加-R参数用于递归。<br>3<br>Touch 1<br>Chmod 610 1    数字<br>Chmod u+rw，g+x 1 </p>
+<p>2 tomcat<br><img src="/images/%E9%99%88%E6%BA%90%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%BD%9C%E4%B8%9A_20200804203942_0.jpg"><br>3 hexo</p>
+<p>git服务<br>命令<br>sudo apt-get install git </p>
+<p>创建仓库目录<br>sudo mkdir /home/repo</p>
+<p>创建一个空仓库<br>sudo git init –bare sample.git</p>
+<p>git clone 用户@ip:/目录</p>
+<p><img src="/images/%E5%9B%BE%E7%89%871.png"></p>
+<p><img src="/images/%E5%9B%BE%E7%89%872.png"></p>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    This theme was developed by <a target="_blank" rel="noopener" href="https://github.com/klugjo">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2020/08/16/nmp-nginx%E4%BB%A3%E7%90%86%E5%86%85%E7%BD%91tomcat-iptables%E8%BD%AC%E5%8F%91/">lnmp+nginx代理内网tomcat+ipta</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2020/08/13/-11%E7%9A%84%E4%BD%9C%E4%B8%9A/">yum安装mysql+yum和各种安装方式的区别+</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2020/08/10/%E7%BB%9C/">lamp环境搭建 +禁止icmp+ssh配置限制登</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2020/08/08/%E4%B9%A0/">markdown学习</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-alpha-dust">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://twitter.com/?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://www.facebook.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://www.instagram.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://dribbble.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://plus.google.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://www.behance.net/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://500px.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:test@example.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a target="_blank" rel="noopener" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Disqus Comments -->
 
 
 
 </body>
+
 </html>
