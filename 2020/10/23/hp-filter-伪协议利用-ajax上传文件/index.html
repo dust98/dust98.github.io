@@ -6,7 +6,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
     <meta charset="UTF-8">
-    <title>katy perry - long shot</title>
+    <title>php://filter 伪协议利用+ajax上传文件</title>
 
     <meta name="author" content="quixotic.">
 
@@ -16,7 +16,7 @@
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
 
-    <link rel="canonical" href="http://yoursite.com/2020/09/03/aty-perry/">
+    <link rel="canonical" href="http://yoursite.com/2020/10/23/hp-filter-伪协议利用-ajax上传文件/">
 
     
         <link rel="alternate" href="/atom.xml" type="application/atom+xml">
@@ -111,25 +111,31 @@
         <div>
     <article class="hentry" role="article">
         <header>
-            <h1 class="entry-title">katy perry - long shot</h1>
+            <h1 class="entry-title">php://filter 伪协议利用+ajax上传文件</h1>
             <p class="meta">
-                <time datetime="2020-09-03T14:23:26.000Z" data-updated="true">Thu Sep 03 2020</time>
+                <time datetime="2020-10-23T07:30:41.000Z" data-updated="true">Fri Oct 23 2020</time>
             </p>
         </header>
         <div class="entry-content">
-            <p><video src="/images/果子狸.mp4" width="400px" height="300px" controls="controls"></video></p>
-
+            <h1 id="php-filer-伪协议利用"><a href="#php-filer-伪协议利用" class="headerlink" title="php:/filer 伪协议利用"></a>php:/filer 伪协议利用</h1><hr>
+<p>file:// 协议条件：allow_url_fopen:off/onallow_url_include :off/on作用：用于访问本地文件系统，在CTF中通常用来读取本地文件的且不受allow_url_fopen与allow_url_include的影响。include()/require()/include_once()/require_once()参数可控的情况下，如导入为非.php文件，则仍按照php语法进行解析，这是include()函数所决定的。说明：file:// 文件系统是 PHP 使用的默认封装协议，展现了本地文件系统。当指定了一个相对路径（不以/、、\或 Windows 盘符开头的路径）提供的路径将基于当前的工作目录。在很多情况下是脚本所在的目录，除非被修改了。使用 CLI 的时候，目录默认是脚本被调用时所在的目录。在某些函数里，例如 fopen() 和 file_get_contents()，include_path 会可选地搜索，也作为相对的路径。用法：/path/to/file.extrelative/path/to/file.extfileInCwd.extC:/path/to/winfile.extC:\path\to\winfile.ext\smbserver\share\path\to\winfile.extfile:///path/to/file.ext示例：file://[文件的绝对路径和文件名]<a target="_blank" rel="noopener" href="http://127.0.0.1/include.php?file=file://E:%5CphpStudy%5CPHPTutorial%5CWWW%5Cphpinfo.txt">http://127.0.0.1/include.php?file=file://E:\phpStudy\PHPTutorial\WWW\phpinfo.txt</a></p>
+<p>直接编辑url </p>
+<p>运行效果如下 ，已查看test.txt中的内容</p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BAri90"><img src="https://s1.ax1x.com/2020/10/23/BAri90.md.png" alt="BAri90.md.png"></a></p>
+<h1 id="ajax上传文件"><a href="#ajax上传文件" class="headerlink" title="ajax上传文件"></a>ajax上传文件</h1><hr>
+<p>代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.bootcss.com&#x2F;jquery&#x2F;1.10.2&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;title&gt;&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;form id&#x3D;&quot;uploadForm&quot; enctype&#x3D;&quot;multipart&#x2F;form-data&quot;&gt;</span><br><span class="line">    文件:&lt;input id&#x3D;&quot;file&quot; type&#x3D;&quot;file&quot; name&#x3D;&quot;file&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;form&gt;</span><br><span class="line">&lt;button id&#x3D;&quot;upload&quot;&gt;上传文件&lt;&#x2F;button&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">    $(function () &#123;</span><br><span class="line">        $(&quot;#upload&quot;).click(function () &#123;</span><br><span class="line">            var formData &#x3D; new FormData($(&#39;#uploadForm&#39;)[0]);</span><br><span class="line">            $.ajax(&#123;</span><br><span class="line">                type: &#39;post&#39;,</span><br><span class="line">                url: &quot;http:&#x2F;&#x2F;192.168.1.101:8080&#x2F;springbootdemo&#x2F;file&#x2F;upload&quot;,</span><br><span class="line">                data: formData,</span><br><span class="line">                cache: false,</span><br><span class="line">                processData: false,</span><br><span class="line">                contentType: false,</span><br><span class="line">            &#125;).success(function (data) &#123;</span><br><span class="line">                alert(data);</span><br><span class="line">            &#125;).error(function () &#123;</span><br><span class="line">                alert(&quot;上传失败&quot;);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
         </div>
         <footer>
             <p class="meta">
                 <span class="byline author vcard">Posted by <span class="fn">quixotic.</span></span>
-                <time datetime="2020-09-03T14:23:26.000Z" data-updated="true">Thu Sep 03 2020</time>
+                <time datetime="2020-10-23T07:30:41.000Z" data-updated="true">Fri Oct 23 2020</time>
                 
             </p>
             <div class="sharing">
     
         <a class="twitter-share-button"
-           target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=katy%20perry%20-%20long%20shot">
+           target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=php%3A%2F%2Ffilter%20%E4%BC%AA%E5%8D%8F%E8%AE%AE%E5%88%A9%E7%94%A8%2Bajax%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6">
             Tweet
         </a>
     
@@ -137,11 +143,11 @@
 
             <p class="meta">
                 
-                <a class="basic-alignment left" href="/" title="Previous Post: php 基础作业">« php 基础作业</a>
+                <a class="basic-alignment left" href="/" title="Previous Post: php 文件操作">« php 文件操作</a>
                 
 
                 
-                <a class="basic-alignment right" href="/" title="Previous Post: music---  Dust-Moon">music---  Dust-Moon »</a>
+                <a class="basic-alignment right" href="/" title="Previous Post: php ">php  »</a>
                 
             </p>
         </footer>

@@ -6,7 +6,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
     <meta charset="UTF-8">
-    <title>👻</title>
+    <title>php 文件操作</title>
 
     <meta name="author" content="quixotic.">
 
@@ -16,7 +16,7 @@
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
 
-    <link rel="canonical" href="http://yoursite.com/">
+    <link rel="canonical" href="http://yoursite.com/2020/10/23/hp-文件操作/">
 
     
         <link rel="alternate" href="/atom.xml" type="application/atom+xml">
@@ -108,165 +108,63 @@
 
 <div id="main">
     <div id="content">
-        <div class="blog-index">
+        <div>
+    <article class="hentry" role="article">
+        <header>
+            <h1 class="entry-title">php 文件操作</h1>
+            <p class="meta">
+                <time datetime="2020-10-23T08:26:37.000Z" data-updated="true">Fri Oct 23 2020</time>
+            </p>
+        </header>
+        <div class="entry-content">
+            <h1 id="不使用rename函数-重命名文件"><a href="#不使用rename函数-重命名文件" class="headerlink" title="不使用rename函数 重命名文件"></a>不使用rename函数 重命名文件</h1><hr>
+<p>使用system()函数执行系统命令，重命名文件</p>
+<p>此时位置是在该php文件位置</p>
+<p>代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    system(&quot;rename 1.php 1.txt&quot;);</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>效果如下<br>执行前</p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BAfXiF"><img src="https://s1.ax1x.com/2020/10/23/BAfXiF.png" alt="BAfXiF.png"></a></p>
+<p>执行后</p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/BAhSMR"><img src="https://s1.ax1x.com/2020/10/23/BAhSMR.png" alt="BAhSMR.png"></a></p>
+<h2 id="更改文件名"><a href="#更改文件名" class="headerlink" title="更改文件名"></a>更改文件名</h2><p>同理使用</p>
+<p>代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    system(&quot;rename 1 2&quot;);</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>执行前后<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/BAhIYD"><img src="https://s1.ax1x.com/2020/10/23/BAhIYD.png" alt="BAhIYD.png"></a><br><a target="_blank" rel="noopener" href="https://imgchr.com/i/BAhHld"><img src="https://s1.ax1x.com/2020/10/23/BAhHld.png" alt="BAhHld.png"></a></p>
+
+        </div>
+        <footer>
+            <p class="meta">
+                <span class="byline author vcard">Posted by <span class="fn">quixotic.</span></span>
+                <time datetime="2020-10-23T08:26:37.000Z" data-updated="true">Fri Oct 23 2020</time>
+                
+            </p>
+            <div class="sharing">
     
-        
-        <article>
-            <header>
-                <h1 class="entry-title">
-                    <a href="/2020/11/17/个简单的留言板实现注册和登录显示用户功能/">一个简单的php+mysql留言板实现注册和登录显示用户功能</a>
-                </h1>
-                <p class="meta">
-                    <time datetime="2020-11-17T09:31:05.000Z" data-updated="true">Tue Nov 17 2020</time>
-                </p>
-            </header>
-            <div class="entry-content"></div>
-            <footer>
-                <a rel="full-article" href="/2020/11/17/个简单的留言板实现注册和登录显示用户功能/">Read on →</a>
-            </footer>
-        </article>
-        
-        <article>
-            <header>
-                <h1 class="entry-title">
-                    <a href="/2020/10/23/hp-文件操作/">php 文件操作</a>
-                </h1>
-                <p class="meta">
-                    <time datetime="2020-10-23T08:26:37.000Z" data-updated="true">Fri Oct 23 2020</time>
-                </p>
-            </header>
-            <div class="entry-content"></div>
-            <footer>
-                <a rel="full-article" href="/2020/10/23/hp-文件操作/">Read on →</a>
-            </footer>
-        </article>
-        
-        <article>
-            <header>
-                <h1 class="entry-title">
-                    <a href="/2020/10/23/hp-filter-伪协议利用-ajax上传文件/">php://filter 伪协议利用+ajax上传文件</a>
-                </h1>
-                <p class="meta">
-                    <time datetime="2020-10-23T07:30:41.000Z" data-updated="true">Fri Oct 23 2020</time>
-                </p>
-            </header>
-            <div class="entry-content"></div>
-            <footer>
-                <a rel="full-article" href="/2020/10/23/hp-filter-伪协议利用-ajax上传文件/">Read on →</a>
-            </footer>
-        </article>
-        
-        <article>
-            <header>
-                <h1 class="entry-title">
-                    <a href="/2020/10/20/php/">php </a>
-                </h1>
-                <p class="meta">
-                    <time datetime="2020-10-20T02:14:02.000Z" data-updated="true">Tue Oct 20 2020</time>
-                </p>
-            </header>
-            <div class="entry-content"></div>
-            <footer>
-                <a rel="full-article" href="/2020/10/20/php/">Read on →</a>
-            </footer>
-        </article>
-        
-        <article>
-            <header>
-                <h1 class="entry-title">
-                    <a href="/2020/10/16/hp作业/">php函数</a>
-                </h1>
-                <p class="meta">
-                    <time datetime="2020-10-16T10:02:00.000Z" data-updated="true">Fri Oct 16 2020</time>
-                </p>
-            </header>
-            <div class="entry-content"></div>
-            <footer>
-                <a rel="full-article" href="/2020/10/16/hp作业/">Read on →</a>
-            </footer>
-        </article>
-        
-        <article>
-            <header>
-                <h1 class="entry-title">
-                    <a href="/2020/10/03/php-基础作业/">php 基础作业</a>
-                </h1>
-                <p class="meta">
-                    <time datetime="2020-10-03T09:01:18.000Z" data-updated="true">Sat Oct 03 2020</time>
-                </p>
-            </header>
-            <div class="entry-content"></div>
-            <footer>
-                <a rel="full-article" href="/2020/10/03/php-基础作业/">Read on →</a>
-            </footer>
-        </article>
-        
-        <article>
-            <header>
-                <h1 class="entry-title">
-                    <a href="/2020/09/03/aty-perry/">katy perry - long shot</a>
-                </h1>
-                <p class="meta">
-                    <time datetime="2020-09-03T14:23:26.000Z" data-updated="true">Thu Sep 03 2020</time>
-                </p>
-            </header>
-            <div class="entry-content"></div>
-            <footer>
-                <a rel="full-article" href="/2020/09/03/aty-perry/">Read on →</a>
-            </footer>
-        </article>
-        
-        <article>
-            <header>
-                <h1 class="entry-title">
-                    <a href="/2020/09/02/haoxishidabian/">music---  Dust-Moon</a>
-                </h1>
-                <p class="meta">
-                    <time datetime="2020-09-01T16:09:29.000Z" data-updated="true">Wed Sep 02 2020</time>
-                </p>
-            </header>
-            <div class="entry-content"></div>
-            <footer>
-                <a rel="full-article" href="/2020/09/02/haoxishidabian/">Read on →</a>
-            </footer>
-        </article>
-        
-        <article>
-            <header>
-                <h1 class="entry-title">
-                    <a href="/2020/08/28/装vscode-和用chrome-调试最简单的js/">安装vscode 和用chrome 调试最简单的js</a>
-                </h1>
-                <p class="meta">
-                    <time datetime="2020-08-28T09:47:53.000Z" data-updated="true">Fri Aug 28 2020</time>
-                </p>
-            </header>
-            <div class="entry-content"></div>
-            <footer>
-                <a rel="full-article" href="/2020/08/28/装vscode-和用chrome-调试最简单的js/">Read on →</a>
-            </footer>
-        </article>
-        
-        <article>
-            <header>
-                <h1 class="entry-title">
-                    <a href="/2020/08/25/tml-css/">chrome浏览器 html+css</a>
-                </h1>
-                <p class="meta">
-                    <time datetime="2020-08-25T03:40:23.000Z" data-updated="true">Tue Aug 25 2020</time>
-                </p>
-            </header>
-            <div class="entry-content"></div>
-            <footer>
-                <a rel="full-article" href="/2020/08/25/tml-css/">Read on →</a>
-            </footer>
-        </article>
-        
-        <div class="pagination">
-    <a href="/archives">Blog Archives</a>
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next</a>
+        <a class="twitter-share-button"
+           target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=php%20%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C">
+            Tweet
+        </a>
+    
 </div>
 
+            <p class="meta">
+                
+                <a class="basic-alignment left" href="/" title="Previous Post: 一个简单的php+mysql留言板实现注册和登录显示用户功能">« 一个简单的php+mysql留言板实现注册和登录显示用户功能</a>
+                
+
+                
+                <a class="basic-alignment right" href="/" title="Previous Post: php://filter 伪协议利用+ajax上传文件">php://filter 伪协议利用+ajax上传文件 »</a>
+                
+            </p>
+        </footer>
+    </article>
+
     
+
 </div>
 
 <aside class="sidebar">
